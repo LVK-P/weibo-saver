@@ -1,0 +1,13 @@
+# Weibo Saver 依赖
+# 安装: pip install -r requirements.txt
+
+# 核心依赖
+httpx>=0.28.0
+browser_cookie3>=0.19.0
+pystray>=0.19.0
+Pillow>=10.0.0
+aiosqlite>=0.20.0
+
+# 可选依赖
+# crawl4weibo>=0.5.2    # 浏览器兜底模式（需要 Playwright）
+# playwright>=1.45.0    # crawl4weibo 的运行时依赖

@@ -1,0 +1,30 @@
+[project]
+name = "weibo-saver"
+version = "1.0.0"
+description = "微博图文内容自动保存工具"
+requires-python = ">=3.11"
+authors = [{ name = "Weibo Saver" }]
+readme = "README.md"
+
+dependencies = [
+    "httpx>=0.28.0",
+    "browser_cookie3>=0.19.0",
+    "pystray>=0.19.0",
+    "Pillow>=10.0.0",
+    "aiosqlite>=0.20.0",
+]
+
+[project.optional-dependencies]
+browser = [
+    "crawl4weibo>=0.5.2",
+]
+
+[project.scripts]
+weibo-saver = "weibo_saver.main:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["weibo_saver*"]
